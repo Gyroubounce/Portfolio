@@ -1,0 +1,43 @@
+/* Bureau */
+h1 {
+    font-size: 96px;
+    font-weight: 600; /* Extra-bold */
+  }
+  h2 {
+    font-size: 58px;
+    font-weight: 500; /* Semi-bold */
+    font-style: italic;
+    line-height: 58px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .description-photo {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 27.6px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 46px;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    .description-photo {
+      font-size: 14px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  

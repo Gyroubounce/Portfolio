@@ -1,0 +1,54 @@
+ 
+  .btn-glass {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 2;
+    transform: translate(-255px, 250px);
+  }
+  
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    animation: glass 2s infinite;
+  }
+
+
+  
+  @keyframes glass {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  @media (max-width: 1440px) {
+    .btn-glass {
+    transform: translate(60px, 150px);
+  }
+}
+
+  @media (max-width: 1024px) {
+    .btn-glass {
+    transform: translate(0px, 160px);
+  }
+}
+
+
+@media (max-width: 440px) {
+  .btn-glass {
+  transform: translate(0px, 0px);
+  }
+}

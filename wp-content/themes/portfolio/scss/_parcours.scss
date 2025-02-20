@@ -1,0 +1,171 @@
+// Variables (optionnel)
+$top-color: #77c1f7;
+$bottom-color: #001b69;
+$circle-width: 150px;
+$circle-height: 82px;
+$border-width: 5px;
+$color-police: azure;
+
+
+.section-parcours {
+    width: 100vw;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle, #41aeff 10%, #051025 90%);
+}
+
+// Titres positionnés
+.parcours {
+    position: absolute;
+    top: 10%;
+    left: 250px;
+    color: $color-police;
+}
+
+.parcours1, .parcours2, .parcours3 {
+    text-align: center;
+    position: relative;
+    color: $color-police;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+}
+
+.parcours1 {
+    left: -220px;
+    top: -50px;
+}
+
+.parcours2 {
+    left: 5px;
+    top: 120px;
+}
+
+.parcours3 {
+    left: -30px;
+    top: -180px;
+}
+
+.content {
+    position:relative;
+    bottom: 20px;
+    text-align: center;
+}
+
+.timeline {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .event {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -2px;
+   
+  
+    .half-circle {
+      width: $circle-width;
+      height: $circle-height;
+
+    }
+  
+    // Positionnement et style pour les événements situés en haut
+    &.top {
+      .half-circle {
+        /* Créer un demi-cercle par le haut : */
+        border-top-left-radius: $circle-width;
+        border-top-right-radius: $circle-width;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: -127px;
+        border-top: $border-width solid $top-color;  // Bordure supérieure colorée
+        border-left: $border-width solid $top-color; 
+        border-right: $border-width solid $top-color; 
+        }
+    }
+  
+    // Positionnement et style pour les événements situés en bas
+    &.bottom {
+      .half-circle {
+        /* Créer un demi-cercle par le bas : */
+        border-bottom-left-radius: $circle-width;
+        border-bottom-right-radius: $circle-width;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom: $border-width solid $top-color;  // Bordure inférieure colorée
+        border-left: $border-width solid $top-color; 
+        border-right: $border-width solid $top-color; 
+        }
+    }
+  }
+
+  .timeline2 {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .event {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -2pxpx;
+   
+  
+    .half-circle {
+      width: $circle-width;
+      height: $circle-height;
+
+    }
+  
+    // Positionnement et style pour les événements situés en haut
+    &.top2 {
+      .half-circle {
+        /* Créer un demi-cercle par le haut : */
+        border-top-left-radius: $circle-width;
+        border-top-right-radius: $circle-width;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: -127px;
+        border-top: $border-width solid $bottom-color;  // Bordure supérieure colorée
+        border-left: $border-width solid $bottom-color; 
+        border-right: $border-width solid $bottom-color; 
+        }
+    }
+  
+    // Positionnement et style pour les événements situés en bas
+    &.bottom2 {
+      .half-circle {
+        /* Créer un demi-cercle par le bas : */
+        border-bottom-left-radius: $circle-width;
+        border-bottom-right-radius: $circle-width;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom: $border-width solid $bottom-color;  // Bordure inférieure colorée
+        border-left: $border-width solid $bottom-color; 
+        border-right: $border-width solid $bottom-color; 
+        }
+    }
+  }
+
+  

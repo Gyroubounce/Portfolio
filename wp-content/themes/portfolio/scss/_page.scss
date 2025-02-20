@@ -1,0 +1,44 @@
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; // S'assure que le contenu remplit toute la page
+    width: 100vw;
+    background-color: #000000; // Couleur de fond douce pour le contraste
+  
+    .about-content {
+      max-width: 800px; // Limite la largeur pour une meilleure lisibilité
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Légère ombre pour détacher le contenu
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+  
+      h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 100px;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        margin-top: 50px;
+        text-transform: uppercase;
+      }
+  
+      p, ul {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+  
+      ul {
+        padding-left: 20px;
+  
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  

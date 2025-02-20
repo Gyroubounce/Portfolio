@@ -1,0 +1,121 @@
+/* Styles pour le footer */
+.main-footer {
+  visibility: hidden; /* Caché initialement */
+  opacity: 0; /* Invisible */
+  transition: opacity 0.3s ease, visibility 0.3s 0s; /* Transition douce */
+  width: 100%;
+  color: azure;
+  padding-top: 5px;
+  z-index: 3;
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+
+
+    
+    .footer-container {
+      margin: 0 10px; // Centre horizontalement
+    }
+  
+    .footer-menu {
+      list-style: none;
+      display: flex;
+      justify-content: left;
+  
+  
+      a {
+        text-decoration: none;
+        color: azure;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+  
+        &:hover {
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  
+  .main-footer.footer-visible {
+    visibility: visible; /* Le rendre visible */
+    opacity: 1; /* Pleine opacité */
+}
+
+
+/* Footer caché par défaut avec la classe portfolio-active */
+.main-footer.portfolio-active {
+  visibility: hidden; /* Caché initialement */
+  opacity: 0; /* Invisible */
+  transition: opacity 0.3s ease, visibility 0.3s 0s; /* Transition douce */
+  padding-top: 5px;
+  color: azure;
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+
+  .footer-container {
+    margin: 0 10px; /* Centrage horizontal */
+  }
+
+  .footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+
+    a {
+      text-decoration: none;
+      color: azure;
+      transition: color 0.3s ease;
+      text-transform: uppercase;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 8px 20px;
+      margin-left: 15px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+        animation: glass 2s infinite;
+      }
+    }
+  }
+}
+
+/* Classe activant l'affichage avec animation */
+.portfolio-active.footer-visible {
+  visibility: visible; /* Le rendre visible */
+  opacity: 1; /* Pleine opacité */
+}
+
+.main-footer.competences-active {
+  visibility: visible; /* Caché initialement */
+  opacity: 1;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center; // Centre verticalement si le footer a plus de contenu
+  margin: 5px 0;
+}
+
+
+
+
+
+  @media (max-width: 928px) {
+    .main-footer.portfolio-active .footer-menu {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center; // Centre verticalement si le footer a plus de contenu
+        margin: 5px 0;
+        
+      
+        
+        a {
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+          background: rgb(0 0 0 / 10%);
+          backdrop-filter: blur(10px);
+        }
+    }
+  }
