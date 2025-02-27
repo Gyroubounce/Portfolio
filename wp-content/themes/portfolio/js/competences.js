@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             {
                 category: "WordPress",
-                description: "Création de thèmes, et personnalisations avancées des child theme grâce aux langages PHP et JavaScript pour manipuler les éléments du DOM"
+                description: "Personnalisations avancées des theme avec les langages PHP et JavaScript"
             },
             {
                 category: "Performance et SEO",
-                description: "Optimisation des performances des sites, stratégies de référencement naturel, amélioration de l'accessibilité"
+                description: "Optimisation des performances, stratégies de référencement, amélioration de l'accessibilité"
             },
             {
                 category: "Environnement",

@@ -64,9 +64,15 @@ if ($photo_query->have_posts()) :
         $description = get_field('description');
         $competences = get_field('competences');
         $lien = get_field('lien');
+        $link_title = get_field('texte_du_lien'); // Ajout du titre du lien
+        $sous_domaine = get_field('sous-domaine'); // Récupération du champ personnalisé
 
-       
+// Vérification avec un console.log en JavaScript
+echo "<script>console.log('Sous-domaine récupéré pour " . get_the_ID() . " : " . esc_js($sous_domaine) . "');</script>";
+echo "<script>console.log('Lien récupéré pour " . get_the_ID() . " : { url: \"" . esc_js($link_url) . "\", title: \"" . esc_js($link_title) . "\" }');</script>";
+
         ?>
+
         <div class="photo-item">
         <a href="<?php the_permalink(); ?>">
             <!-- Affichage de l'image à la une en taille large -->
@@ -78,9 +84,12 @@ if ($photo_query->have_posts()) :
                     
         <div class="photo-overlay">
         <!-- Icône pour voir la publication -->
-        <a href="<?php the_permalink(); ?>" class="icon eye">
-            <img src="http://portfolio.local/wp-content/uploads/2024/11/eye.png" alt="Eye Icon">
+
+
+        <a href="<?php echo esc_url($sous_domaine); ?>" class="icon eye" target="_blank" >
+            <img src="/wp-content/uploads/2024/11/eye.png" alt="Eye Icon">
         </a>
+
 <!-- Icône pour ouvrir l'image en plein écran -->
                 <a href="#" 
                     data-lightbox="image-<?php the_ID(); ?>" 
@@ -107,8 +116,11 @@ if ($photo_query->have_posts()) :
                     data-permalink="<?php the_permalink(); ?>"
                     data-description="<?php echo esc_attr(get_field('description')); ?>" 
                     data-competences="<?php echo esc_attr(get_field('competences')); ?>" 
-                    data-link="<?php echo esc_url(get_field('lien')); ?>"> <!-- Ajout des nouveaux champs ici -->
-                    <img src="http://portfolio.local/wp-content/uploads/2024/11/Icon_fullscreen.png" alt="icône full-screen">
+                    data-link="<?php echo esc_url(get_field('lien')); ?>"
+                    data-link-title="<?php echo esc_attr($link_title); ?>"
+                    data-sous-domaine="<?php echo esc_url(get_field('sous-domaine')); ?>"
+                    data-texte-sous-domaine="<?php echo esc_attr(get_field('texte_sous_domaine')); ?>">>
+                    <img src="/wp-content/uploads/2024/11/Icon_fullscreen.png" alt="icône full-screen">
                 </a>
 
 

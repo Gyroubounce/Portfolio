@@ -22,14 +22,7 @@ function portfolio_enqueue_assets() {
     wp_enqueue_script('photo-navigation', get_template_directory_uri() . '/js/photo-navigation.js');
     wp_enqueue_script('header-burger', get_template_directory_uri() . '/js/header.js');
  
-    if(is_front_page()) {
-        wp_enqueue_script('charger-plus', get_template_directory_uri() . '/js/charger-plus.js');
 
-        // Localiser l'URL AJAX en utilisant wp_add_inline_script
-        $script = 'var ajaxurl = "' . admin_url('admin-ajax.php') . '";';
-        wp_add_inline_script('charger-plus', $script);
-  
-    };
 
     // filtre-photo
     wp_enqueue_script('filtre-photo', get_template_directory_uri() . '/js/filtre-photo.js');
@@ -67,6 +60,7 @@ add_action('wp_enqueue_scripts', 'portfolio_enqueue_assets');
 // Action AJAX pour les utilisateurs connectés (et non connectés)
 add_action('wp_ajax_your_action', 'handle_ajax_request');
 add_action('wp_ajax_nopriv_your_action', 'handle_ajax_request');
+
 
 
 
@@ -131,6 +125,9 @@ function load_filtered_photos() {
             $description = get_field('description');
             $competences = get_field('competences');
             $lien = get_field('lien');
+            $sous_domaine = get_field('sous-domaine'); // Récupération du champ personnalisé
+
+
 
             // Récupération des langages
             $langages = get_the_terms(get_the_ID(), 'langage');
@@ -150,10 +147,10 @@ function load_filtered_photos() {
                 </a>
                 <div class="photo-overlay">
                     <!-- Icône de lien vers la publication -->
-                    <a href="<?php the_permalink(); ?>" class="icon eye">
-                        <img src="http://portfolio.local/wp-content/uploads/2024/11/eye.png" alt="Eye Icon">
+                    <a href="<?php echo esc_url($sous_domaine); ?>" class="icon eye">
+                      <img src="/wp-content/uploads/2024/11/eye.png" alt="Eye Icon">
                     </a>
-                    <!-- Icône fullscreen avec données supplémentaires -->
+                        <!-- Icône fullscreen avec données supplémentaires -->
                     <a href="#" 
                         data-lightbox="image-<?php the_ID(); ?>" 
                         class="icon fullscreen" 
@@ -163,8 +160,9 @@ function load_filtered_photos() {
                         data-category="<?php echo $category_name; ?>"
                         data-description="<?php echo esc_attr($description); ?>" 
                         data-competences="<?php echo esc_attr($competences); ?>" 
-                        data-link="<?php echo esc_url($lien); ?>">
-                        <img src="http://portfolio.local/wp-content/uploads/2024/11/Icon_fullscreen.png" alt="icône full-screen">
+                        data-link="<?php echo esc_url($lien); ?>"
+                        data-sous-domaine="<?php echo esc_url(get_field('sous-domaine')); ?>">>
+                        <img src="/wp-content/uploads/2024/11/Icon_fullscreen.png" alt="icône full-screen">
                     </a>
                     <div class="text-filtre">
                         <div class="text-filtre-flex">

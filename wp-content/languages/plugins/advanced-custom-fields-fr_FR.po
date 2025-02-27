@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Advanced Custom Fields (ACF®) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-07 09:17:56+0000\n"
+"PO-Revision-Date: 2025-02-12 20:30:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2637,11 +2637,6 @@ msgctxt "post status"
 msgid "Registration Failed"
 msgstr "Echec de l’enregistrement"
 
-#: includes/acf-internal-post-type-functions.php:509
-#: includes/acf-internal-post-type-functions.php:538
-msgid "REST API"
-msgstr "REST API"
-
 #: includes/acf-internal-post-type-functions.php:507
 #: includes/acf-internal-post-type-functions.php:536
 msgid "URLs"
@@ -3420,6 +3415,11 @@ msgstr "Assigner le texte utilisé pour renvoyer à l’index principal après l
 #: includes/admin/views/acf-taxonomy/advanced-settings.php:576
 msgid "The description is not prominent by default; however, some themes may show it."
 msgstr "La description n’est pas très utilisée par défaut, cependant de plus en plus de thèmes l’affichent."
+
+#: includes/acf-internal-post-type-functions.php:509
+#: includes/acf-internal-post-type-functions.php:538
+msgid "REST API"
+msgstr "API REST"
 
 #. Author URI of the plugin
 #: acf.php

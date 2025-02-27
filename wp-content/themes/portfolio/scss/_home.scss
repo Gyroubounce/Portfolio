@@ -19,7 +19,7 @@
   }
   
    .filters {
-        position: fixed;
+        position: absolute;
         left: 20px;
         bottom: 80px;
         background: rgba(255, 255, 255, 0.1);
@@ -381,7 +381,6 @@
   margin: 0 auto; /* Centre horizontalement */
   padding: 15px; /* Espacement interne pour aérer */
   top: 15px; /* Positionner en haut */
-  left: 25px;
   margin-bottom: 30px;
 
 

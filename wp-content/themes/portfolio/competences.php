@@ -8,10 +8,10 @@ Template Name: Compétences
     <main>
         <div class="skills-banner">
             <div class="banner-image">
-                <img src="http://portfolio.local/wp-content/uploads/2025/02/Sens.jpg" alt="Image de compétences">
+                <img src="/wp-content/uploads/2025/02/Sens.jpg" alt="Image de compétences">
             </div>
             <div class="banner-content">
-                <h1>Mes Compétences</h1>
+                <h2>Mes Compétences</h2>
                 <p>en développement Front-End</p>
                 <div class="button-group">
                     <button class="skills-button" data-category="techniques">Techniques</button>
@@ -27,14 +27,7 @@ Template Name: Compétences
                 <ul id="skills-list">
                     <!-- Liste des compétences sera ajoutée dynamiquement ici -->
                 </ul>
-                <div class="lightbox-comp">
-                    <div class="lightbox-content">
-                        <span class="close">&times;</span>
-                        <h3 class="lightbox-title"></h3>
-                        <img class="lightbox-image" src="" alt="">
-                        <ul class="lightbox-list"></ul>
-                    </div>
-                </div>
+                
             </div>
         </div>    
             </div>

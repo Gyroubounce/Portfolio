@@ -228,7 +228,7 @@ p {
   justify-content: space-between;
   height: 99vh;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .container {
@@ -347,6 +347,7 @@ nav.menu-header-container.portfolio-active {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0s 0.3s;
+  z-index: 3;
 }
 nav.menu-header-container.portfolio-active.active {
   visibility: visible;
@@ -402,7 +403,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   border: none;
   cursor: pointer;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
 }
 .burger-menu.portfolio-active .line {
   width: 100%;
@@ -430,6 +431,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   height: 962px;
   color: white;
   text-align: end;
+  width: 100%;
   /* Animation de fading et déplacement */
 }
 @keyframes fadeInMove {
@@ -870,6 +872,73 @@ nav.menu-header-container.portfolio-active ul li a:hover {
     margin-left: 0;
   }
 }
+@media screen and (orientation: landscape) and (max-width: 800px) {
+  .header-image h2 span:first-child {
+    font-size: 2.5rem;
+    transform: translate(-200px, -80px);
+  }
+  .header-image h2 span:nth-child(2) {
+    font-size: 1.7rem;
+    transform: translate(130px, -67px);
+  }
+  .header-image h2 span:nth-child(3) {
+    font-size: 1.7rem;
+    transform: translate(-202px, -35px);
+  }
+  .header-image h2 span:nth-child(4) {
+    font-size: 1.5rem;
+    transform: translate(-190px, -110px);
+  }
+  .header-image h2 span:nth-child(5) {
+    font-size: 1.2rem;
+    transform: translate(-70px, 40px);
+  }
+  .header-image h2 span:last-child {
+    font-size: 1.3rem;
+    transform: translate(-120px, 50px);
+  }
+  .header-image .design .front img {
+    width: 100%;
+  }
+  .header-image .design .front .img1 {
+    -o-object-position: 53% center;
+    object-position: 53% center;
+  }
+  .header-image .design .front .img2 {
+    -o-object-position: 67% center;
+    object-position: 67% center;
+  }
+  .header-image .design .front .img3 {
+    -o-object-position: 41% center;
+    object-position: 41% center;
+    -webkit-clip-path: polygon(6% 0px, 100% 0px, 100% calc(100% - 0px), 0% 100%);
+    clip-path: polygon(6% 0px, 100% 0px, 100% calc(100% - 0px), 0% 100%);
+  }
+  .header-image .design .front .img4 {
+    display: none;
+    -webkit-clip-path: polygon(6% 0px, 100% 0px, 100% calc(100% - 0px), 0% 100%);
+    clip-path: polygon(6% 0px, 100% 0px, 100% calc(100% - 0px), 0% 100%);
+  }
+  nav.menu-header-container.portfolio-active {
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    padding: 0;
+  }
+  nav.menu-header-container.portfolio-active ul {
+    align-items: center;
+    gap: 40px;
+    margin: 80px 0;
+  }
+  nav.menu-header-container.portfolio-active ul li {
+    position: relative;
+    margin-left: 0;
+  }
+  .btn-glass {
+    transform: translate(-20px, 100px) !important;
+  }
+}
 /* Styles pour le footer */
 .main-footer {
   visibility: hidden; /* Caché initialement */
@@ -916,6 +985,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   position: fixed;
   bottom: 10px;
   left: 0px;
+  z-index: 3;
 }
 .main-footer.portfolio-active .footer-container {
   margin: 0 10px; /* Centrage horizontal */
@@ -957,7 +1027,8 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   display: flex;
   flex-direction: column !important;
   align-items: center;
-  margin: 5px 0;
+  margin: 0px 0;
+  z-index: 3;
 }
 
 @media (max-width: 928px) {
@@ -1023,7 +1094,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1086,6 +1157,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   padding: 10px 0;
   font-size: 16px;
   background: rgba(0, 0, 0, 0.1);
+  color: white;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   margin-bottom: 10px;
@@ -1139,6 +1211,10 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   color: red;
   font-size: 12px;
   margin-top: 10px;
+}
+
+.modal-close {
+  color: white;
 }
 
 @media (max-width: 1440px) {
@@ -1428,7 +1504,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   border: 0;
 }
 .section-portfolio .filters {
-  position: fixed;
+  position: absolute;
   left: 20px;
   bottom: 80px;
   background: rgba(255, 255, 255, 0.1);
@@ -1740,7 +1816,6 @@ nav.menu-header-container.portfolio-active ul li a:hover {
     margin: 0 auto; /* Centre horizontalement */
     padding: 15px; /* Espacement interne pour aérer */
     top: 15px; /* Positionner en haut */
-    left: 25px;
     margin-bottom: 30px;
   }
   .section-portfolio .filters .filter-group, .section-portfolio .filters .filter-sort {
@@ -2101,10 +2176,10 @@ nav.menu-header-container.portfolio-active ul li a:hover {
 
 @keyframes glass {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
   }
   50% {
-    box-shadow: 0 0 40px rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
   }
 }
 @media (max-width: 1440px) {
@@ -2125,10 +2200,9 @@ nav.menu-header-container.portfolio-active ul li a:hover {
 /* Pour centrer la bannière au milieu de l'écran */
 .skills-banner {
   position: absolute; /* Cela fixe la bannière sur l'écran */
-  top: 50px;
-  left: -6px;
+  top: 80px;
   width: 100%;
-  height: 90vh; /* Prend toute la hauteur de l'écran */
+  height: 640px; /* Prend toute la hauteur de l'écran */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2171,16 +2245,15 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
   width: 80%; /* Contrôle la largeur du contenu */
   max-width: 600px; /* Largeur maximale pour le contenu */
-  margin-top: -220px; /* Dépassement par rapport à l'image */
+  margin-top: -180px; /* Dépassement par rapport à l'image */
   text-align: center;
 }
 .banner-content:hover {
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
   animation: glass 3s infinite;
 }
-
-h1 {
+.banner-content h2 {
   font-size: 3em;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -2224,7 +2297,8 @@ p {
 }
 
 .skill-list {
-  margin-top: 420px;
+  margin-top: 340px;
+  display: flex;
 }
 
 /* Style général de la carte */
@@ -2236,7 +2310,7 @@ p {
   font-size: 1.2em;
   color: #ffffff;
   line-height: normal;
-  margin-top: -140px;
+  margin-top: -70px;
 }
 
 .hidden {
@@ -2280,58 +2354,65 @@ p {
   color: #ffffff;
 }
 
-/* Lightbox style */
-.lightbox-comp {
-  display: none; /* Par défaut, masqué */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
-  text-align: center;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
 @media (max-width: 1024px) {
   .banner-content {
     padding: 30px 40px;
   }
   .card {
-    width: 900px;
+    width: 800px;
   }
 }
 @media (max-width: 928px) {
-  .card {
-    width: 800px;
+  .skills-banner {
+    height: 1300px;
+    align-items: baseline;
   }
-  .skill-card h3 {
-    height: 60px;
+  .banner-image {
+    height: 490px;
   }
-  .skill-card {
-    padding: 0 15px;
+  .button-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .button-group .skills-button {
+    margin: 0 100px;
+  }
+  #card-title {
+    font-size: 1em;
+    margin-top: 460px;
+    padding: 0 20px;
   }
   .banner-content {
-    padding: 20px 0px;
+    top: 340px;
+    width: 70%;
+  }
+  .banner-content h2 {
+    font-size: 1.7em;
+  }
+  .banner-content p {
+    font-size: 0.9em;
+  }
+  #skills-list {
+    margin-top: 480px;
+  }
+  .skill-list {
+    width: 600px;
+    margin-top: 0px;
+  }
+  .skill-list ul {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (max-width: 700px) {
+  .skills-banner {
+    height: 1300px;
+    align-items: baseline;
+  }
+  .banner-image {
+    height: 490px;
+  }
   .button-group {
     display: flex;
     justify-content: center;
@@ -2344,27 +2425,22 @@ p {
     top: 340px;
     width: 70%;
   }
-  .banner-content h1 {
+  .banner-content h2 {
     font-size: 1.7em;
   }
   .banner-content p {
     font-size: 0.9em;
   }
-  #card-title {
-    font-size: 1em;
-    margin-top: 840px;
+  #skills-list {
+    margin-top: 470px;
   }
   .skill-list {
-    margin-top: 300px;
+    width: 420px;
+    margin-top: 0px;
   }
-  .skill-list .card {
-    width: 300px;
-    height: 1100px;
-  }
-  .skill-list .card ul {
+  .skill-list ul {
     display: flex;
     flex-direction: column;
-    margin-top: 800px;
   }
 }
 @media (max-width: 550px) {
@@ -2383,10 +2459,10 @@ p {
   }
   #card-title {
     font-size: 0.9em;
-    margin-top: 840px;
+    margin-top: 470px;
     padding: 0 20px;
   }
-  .skill-list .card {
-    width: 300px;
+  .skill-list {
+    width: 270px;
   }
 }/*# sourceMappingURL=main.css.map */

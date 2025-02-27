@@ -16,7 +16,7 @@
                     <span class="lightbox-close" id="close-lightbox">&#10005;</span>
                 </div>
                  <div class="lightbox-details">
-                    <p><strong>Lien:</strong> <a href="#" id="lightbox-link" target="_blank">Code sur GitHub</a></p>
+                    <p><strong>Lien:</strong> <a href="#" id="lightbox-link" target="_blank">Dossier</a></p>
                 </div>
 
                 <div class="lightbox-text-layout">
@@ -28,7 +28,7 @@
                 </div>   
               
                 <div class="lightbox-footer">
-                    <a href="#" id="lightbox-permalink" class="btn-en-savoir-plus" data-permalink="">Site Web</a>
+                    <a href="#" id="lightbox-sous-domaine" class="btn-en-savoir-plus" data-permalink="">Ouvrir</a>
                 </div>
             </div>
 

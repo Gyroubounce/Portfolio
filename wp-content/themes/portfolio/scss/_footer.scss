@@ -52,6 +52,7 @@
   position: fixed;
   bottom: 10px;
   left: 0px;
+  z-index: 3;
 
   .footer-container {
     margin: 0 10px; /* Centrage horizontal */
@@ -96,7 +97,8 @@
   display: flex;
   flex-direction: column !important;
   align-items: center; // Centre verticalement si le footer a plus de contenu
-  margin: 5px 0;
+  margin: 0px 0;
+  z-index: 3;
 }
 
 

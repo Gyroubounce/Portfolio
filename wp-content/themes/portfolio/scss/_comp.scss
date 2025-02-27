@@ -1,10 +1,9 @@
 /* Pour centrer la bannière au milieu de l'écran */
 .skills-banner {
     position: absolute;  /* Cela fixe la bannière sur l'écran */
-    top: 50px;
-    left: -6px;
+    top: 80px;
     width: 100%;
-    height: 90vh;  /* Prend toute la hauteur de l'écran */
+    height: 640px;  /* Prend toute la hauteur de l'écran */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,21 +43,22 @@
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); // Ombre pour plus de profondeur
     width: 80%;  /* Contrôle la largeur du contenu */
     max-width: 600px;  /* Largeur maximale pour le contenu */
-    margin-top: -220px;  /* Dépassement par rapport à l'image */
+    margin-top: -180px;  /* Dépassement par rapport à l'image */
     text-align: center;
 
     &:hover {
         background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
         animation: glass 3s infinite;  
+    }
+
+    h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
   }
   
-  h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
   
   p {
     font-size: 1.2em;
@@ -98,7 +98,8 @@
 }
   
   .skill-list {
-    margin-top: 420px;
+    margin-top: 340px;
+    display: flex;
 }
 
 /* Style général de la carte */
@@ -110,7 +111,7 @@
   font-size: 1.2em;
   color: #ffffff;
   line-height: normal;
-  margin-top: -140px;
+  margin-top: -70px;
 }
 
 .hidden {
@@ -155,35 +156,6 @@
 }
 
 
-/* Lightbox style */
-.lightbox-comp {
-    display: none; /* Par défaut, masqué */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
-    text-align: center;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 
 // Media Query : small desktop
 
@@ -193,28 +165,73 @@
     padding: 30px 40px;
   }
     .card {
-        width: 900px;
+        width: 800px;
     }
 }
 
 
 @media (max-width: 928px) {
-    .card {
-        width: 800px;
-       
+  .skills-banner {
+    height: 1300px;
+    align-items: baseline;
+}
+ .banner-image {
+    height: 490px;
+}
+  .button-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .skills-button {
+      margin: 0 100px;
     }
-    .skill-card h3 {
-      height: 60px;
+
   }
-  .skill-card {
-    padding: 0 15px;
+
+  #card-title {
+    font-size: 1em;
+    margin-top: 460px;
+    padding: 0 20px;
   }
+
   .banner-content {
-    padding: 20px 0px;
+    top: 340px;
+    width: 70%;
+
+    h2 {
+      font-size: 1.7em;
+    }
+
+    p {
+      font-size: .9em;
+    }
+  }
+
+  #skills-list {
+    margin-top: 480px;
+}
+
+  .skill-list {
+        width: 600px;
+        margin-top: 0px;
+
+      ul {
+          display: flex;
+          flex-direction: column;
+      }
+    
   }
 }
 
 @media (max-width: 700px) {
+  .skills-banner {
+    height: 1300px;
+    align-items: baseline;
+}
+ .banner-image {
+    height: 490px;
+}
   .button-group {
     display: flex;
     justify-content: center;
@@ -230,7 +247,7 @@
     top: 340px;
     width: 70%;
 
-    h1 {
+    h2 {
       font-size: 1.7em;
     }
 
@@ -239,24 +256,19 @@
     }
   }
 
-  #card-title {
-    font-size: 1em;
-    margin-top: 840px;
-  }
+  #skills-list {
+    margin-top: 470px;
+}
 
   .skill-list {
-      margin-top: 300px;
-
-      .card {
-        width: 300px;
-        height: 1100px;
+        width: 420px;
+        margin-top: 0px;
 
       ul {
           display: flex;
           flex-direction: column;
-          margin-top: 800px;
       }
-    }
+    
   }
 }
 
@@ -281,13 +293,10 @@
   }
   #card-title {
     font-size: .9em;
-    margin-top: 840px;
+    margin-top: 470px;
     padding: 0 20px;
   }
   .skill-list {
-
-      .card {
-        width: 300px;
-    }
+        width: 270px;
   }
 }

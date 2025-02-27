@@ -14,7 +14,7 @@
   display: flex; // Flexbox pour centrer la modale
   justify-content: center;
   align-items: center;
-  z-index: 3; // Placer la modale au-dessus de tout autre contenu
+  z-index: 4; // Placer la modale au-dessus de tout autre contenu
   opacity: 0; // Commence invisible
   transition: opacity 0.3s ease; // Transition pour l'animation d'apparition
 
@@ -83,6 +83,7 @@
     padding: 10px 0;
     font-size: 16px;
     background: rgba(0, 0, 0, 0.1);
+    color: white;
     border: 1px solid rgba(255, 255, 255, 0.4); // Exemple de remplacement de $gray-medium
     border-radius: 8px;
     margin-bottom: 10px;
@@ -143,6 +144,10 @@
     font-size: 12px;
     margin-top: 10px;
   }
+}
+
+.modal-close {
+  color: white;
 }
 
 @media (max-width: 1440px) {
