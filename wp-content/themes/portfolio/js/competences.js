@@ -69,11 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
         techniques: [
             {
                 category: "Front-end",
-                description: "Connaissance dans les langages HTML5, CSS3, PHP, JavaScript, SASS/SCSS"
+                description: "Connaissance dans les langages HTML5, CSS3, PHP, JavaScript, SASS/SCSS, AJAX, JQuery"
             },
             {
                 category: "WordPress",
-                description: "Personnalisations avancées des theme avec les langages PHP et JavaScript"
+                description: "Personnalisations avancées des thèmes avec les langages PHP et JavaScript"
             },
             {
                 category: "Performance et SEO",
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             {
                 category: "Qualité",
-                description: "Tests unitaires et fonctionnels, debugging, Green IT"
+                description: "Compréhension des tests unitaires et fonctionnels, debugging, Green IT"
             },
             {
                 category: "Veille",
