@@ -52,6 +52,8 @@ jQuery(document).ready(function($) {
         var sousDomaine = $(this).data('sous-domaine');
         var texteSousDomaine = $(this).data('texte-sous-domaine'); // Nouveau
 
+
+
         // Injecter les données dans la modale
         $('#lightbox-photo').attr('src', url);
         $('#lightbox-title').text(title);
@@ -64,7 +66,7 @@ jQuery(document).ready(function($) {
         if (lien) {
             $('#lightbox-link').attr('href', lien).attr('target', '_blank');
         }
-        $('#lightbox-link').text(texteLien || "Dossier");
+        $('#lightbox-link').text(texteLien || "Dépôt GitHub");
 
         // Mise à jour du bouton du sous-domaine
         if (sousDomaine) {
@@ -120,7 +122,7 @@ jQuery(document).ready(function($) {
         if (image.lien) {
             $('#lightbox-link').attr('href', image.lien).attr('target', '_blank');
         }
-        $('#lightbox-link').text(image.texteLien || "Dossier");
+        $('#lightbox-link').text(image.texteLien || "Dépôt GitHub");
 
         if (image.sousDomaine) {
             $('#lightbox-sous-domaine').attr('href', image.sousDomaine).attr('target', '_blank');

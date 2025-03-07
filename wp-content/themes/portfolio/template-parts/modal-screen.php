@@ -16,7 +16,7 @@
                     <span class="lightbox-close" id="close-lightbox">&#10005;</span>
                 </div>
                  <div class="lightbox-details">
-                    <p><strong>Lien:</strong> <a href="#" id="lightbox-link" target="_blank">Dossier</a></p>
+                    <p><strong>Lien:</strong> <a href="#" id="lightbox-link" target="_blank">Dépôt GitHub</a></p>
                 </div>
 
                 <div class="lightbox-text-layout">

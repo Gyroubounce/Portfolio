@@ -1625,6 +1625,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 10px;
 }
 .photo-grid .photo-item .photo-overlay:hover {
   opacity: 1;
