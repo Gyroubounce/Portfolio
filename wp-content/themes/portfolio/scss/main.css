@@ -872,7 +872,7 @@ nav.menu-header-container.portfolio-active ul li a:hover {
     margin-left: 0;
   }
 }
-@media screen and (orientation: landscape) and (max-width: 800px) {
+@media screen and (orientation: landscape) and (max-width: 850px) {
   .header-image h2 span:first-child {
     font-size: 2.5rem;
     transform: translate(-200px, -80px);
@@ -2463,6 +2463,6 @@ p {
     padding: 0 20px;
   }
   .skill-list {
-    width: 270px;
+    width: 350px;
   }
 }/*# sourceMappingURL=main.css.map */
